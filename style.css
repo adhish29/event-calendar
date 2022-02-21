@@ -1,0 +1,149 @@
+body {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  background-color: #fffcff;
+}
+
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+.container {
+  width: 770px;
+}
+
+.weekdays {
+  display: flex;
+  /* width: 100%; */
+  color: #247ba0;
+}
+
+.weekdays div {
+  width: 100px;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.header {
+  padding: 10px;
+  color: #d36c6c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.monthDisplay {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.header button {
+  background-color: #92a1d1;
+}
+
+.calender {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0px 0px 3px #cbd4c2;
+  cursor: pointer;
+}
+
+.day:hover {
+  background-color: #e8faed;
+}
+
+.padding {
+  background-color: #fffcff;
+  cursor: default;
+  box-shadow: none;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+#newEventModal,
+#deleteEventModal {
+  display: none;
+  z-index: 7;
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 175px);
+  width: 350px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+}
+
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+
+#cancelButton,
+#deleteButton {
+  background-color: #d36c6c;
+}
+#saveButton,
+#closeButton {
+  background-color: #92a1d1;
+}
+
+.event {
+  font-size: 13px;
+  padding: 3px;
+  background-color: #58bae4;
+  color: white;
+  border-radius: 5px;
+  max-height: 50px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#eventText {
+  font-size: 14px;
+}
+
+#currentDay {
+  background-color: #c3ddeb;
+}
